@@ -10,7 +10,6 @@ import type {
 import {
   mobile,
   backend,
-  creator,
   web,
   javascript,
   typescript,
@@ -39,10 +38,14 @@ export const navLinks: TNavLink[] = [
     id: "about",
     title: "About",
   },
+  // {
+  //   id: "work",
+  //   title: "Work",
+  // },
   {
-    id: "work",
-    title: "Work",
-  },
+    id: "resume",
+    title: "Resume",
+   },
   {
     id: "contact",
     title: "Contact",
@@ -61,11 +64,7 @@ const services: TService[] = [
   {
     title: "Backend Developer",
     icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
-  },
+  }
 ];
 
 const technologies: TTechnology[] = [
@@ -207,68 +206,69 @@ const testimonials: TTestimonial[] = [
 
 const projects: TProject[] = [
   {
-    name: "Car Rent",
+    name: "MorningBox",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Development of an application for a cafeteria chain allowing customers to view specific menus and managers to manage menus via a dashboard.",
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
+        name: "Node.js",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Docker",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    sourceCodeLink: "https://github.com/",
+    image: carrent, // Replace with the appropriate image variable
+    sourceCodeLink: "https://github.com/redaabou", // Update if there is a specific repository
   },
   {
-    name: "Job IT",
+    name: "Empathify",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "An application designed to help victims of harassment connect and support each other through a secure platform.",
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: "Ruby on Rails",
+        color: "red-text-gradient",
       },
       {
-        name: "restapi",
+        name: "RESTful API",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: "Heroku",
+        color: "purple-text-gradient",
       },
     ],
-    image: jobit,
-    sourceCodeLink: "https://github.com/",
+    image: jobit, // Replace with the appropriate image variable
+    sourceCodeLink: "https://github.com/redaabou", // Update if there is a specific repository
   },
   {
-    name: "Trip Guide",
+    name: "Lyrics-Finder",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A REST API-based application allowing users to search for song lyrics and access artist information.",
     tags: [
       {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
+        name: "Node.js",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    sourceCodeLink: "https://github.com/",
+    image: tripguide, // Replace with the appropriate image variable
+    sourceCodeLink: "https://github.com/redaabou", // Update if there is a specific repository
   },
 ];
+
 
 export { services, technologies, experiences, testimonials, projects };
