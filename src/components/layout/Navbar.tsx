@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 import { styles } from "../../constants/styles";
 import { navLinks } from "../../constants";
 import { logo, menu, close } from "../../assets";
 import { config } from "../../constants/config";
+import cvPdf from "../../assets/reda.dev.pdf";
+import navIcon1 from "../../assets/nav-icon1.svg";
+import navIcon2 from "../../assets/nav-icon2.svg";
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>();
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,16 +74,67 @@ const Navbar = () => {
         </Link>
 
         <ul className="hidden list-none flex-row gap-10 sm:flex">
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.id ? "text-white" : "text-secondary"
-              } cursor-pointer text-[18px] font-medium hover:text-white`}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-          ))}
+    {navLinks.map((nav) => (
+      <li
+        key={nav.id}
+        style={{ marginTop: '7px' }}
+        className={`${
+          active === nav.id ? "text-white" : "text-secondary"
+        } cursor-pointer text-[18px] font-medium hover:text-white`}
+      >
+        <a href={`#${nav.id}`}>{nav.title}</a>
+      </li>
+    ))}
+
+              <div className="social-icon">
+                <a href='https://www.linkedin.com/in/reda-aboulouafa-993a11220/' target='_blank'><img src={navIcon1} alt="" /></a>
+                <a href='https://github.com/redaabou' target='_blank' style={{ marginLeft: '15px' }}><img src={navIcon2} alt="" /></a>
+              </div>
+            
+              <li>
+      <button
+        style={{
+          fontWeight: '500',
+          color: isHovered ? '#121212' : '#fff',
+          border: '1px solid #fff',
+          padding: '10px 34px',
+          fontSize: '15px',
+          position: 'relative',
+          backgroundColor: 'transparent',
+          cursor: 'pointer',
+          overflow: 'hidden',
+          transition: 'color 0.3s ease-in-out',
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onClick={() => {
+          window.open(cvPdf);
+        }}
+      >
+        <span
+          style={{
+            position: 'relative',
+            zIndex: 1,
+          }}
+        >
+          Download CV
+        </span>
+        <span
+          style={{
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: isHovered ? '100%' : '0%',
+            height: '100%',
+            backgroundColor: '#fff',
+            zIndex: -1,
+            transition: 'width 0.3s ease-in-out',
+          }}
+        ></span>
+      </button>
+    </li>
+            
         </ul>
 
         <div className="flex flex-1 items-center justify-end sm:hidden">

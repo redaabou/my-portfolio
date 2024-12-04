@@ -10,6 +10,8 @@ import {
   Tech,
   Works,
   StarsCanvas,
+  
+  
 } from "./components";
 import { useEffect } from "react";
 import { config } from "./constants/config";
@@ -32,6 +34,7 @@ const App = () => {
         {/* <Experience /> */}
         <Tech />
         <Works />
+        
         {/* <Feedbacks /> */}
         <div className="relative z-0">
           <Contact />

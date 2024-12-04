@@ -31,6 +31,7 @@ import {
   jobit,
   tripguide,
   threejs,
+  
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -42,10 +43,10 @@ export const navLinks: TNavLink[] = [
   //   id: "work",
   //   title: "Work",
   // },
-  {
-    id: "resume",
-    title: "Resume",
-   },
+  // {
+  //   id: "resume",
+  //   title: "Resume",
+  //  },
   {
     id: "contact",
     title: "Contact",
@@ -224,7 +225,7 @@ const projects: TProject[] = [
       },
     ],
     image: carrent, // Replace with the appropriate image variable
-    sourceCodeLink: "https://github.com/redaabou", // Update if there is a specific repository
+    sourceCodeLink: "https://github.com/redaabou/morningBox", // Update if there is a specific repository
   },
   {
     name: "Empathify",
@@ -244,13 +245,13 @@ const projects: TProject[] = [
         color: "purple-text-gradient",
       },
     ],
-    image: jobit, // Replace with the appropriate image variable
-    sourceCodeLink: "https://github.com/redaabou", // Update if there is a specific repository
+    image: jobit,
+    sourceCodeLink: "https://github.com/SaraSouhail/empathify",
   },
   {
     name: "Lyrics-Finder",
     description:
-      "A REST API-based application allowing users to search for song lyrics and access artist information.",
+      "Created a REST API-based application for users to search song lyrics and access artist details, built with Node.js, Express, and MongoDB for fast and accurate results.",
     tags: [
       {
         name: "Node.js",
@@ -265,8 +266,8 @@ const projects: TProject[] = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide, // Replace with the appropriate image variable
-    sourceCodeLink: "https://github.com/redaabou", // Update if there is a specific repository
+    image: tripguide, 
+    sourceCodeLink: "https://github.com/redaabou",
   },
 ];
 
