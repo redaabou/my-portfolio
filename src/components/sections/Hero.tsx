@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
-
+import { useState } from "react";
 import { styles } from "../../constants/styles";
 import { ComputersCanvas } from "../canvas";
 import { config } from "../../constants/config";
+import cvPdf from "../../assets/reda.dev.pdf";
 
 const Hero = () => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <section className={`relative mx-auto h-screen w-full`}>
       <div
@@ -23,6 +25,48 @@ const Hero = () => {
             {config.hero.p[0]} <br className="hidden sm:block" />
             {config.hero.p[1]}
           </p>
+          <br />
+          <button
+        style={{
+          fontWeight: '500',
+          color: isHovered ? '#121212' : '#fff',
+          border: '1px solid #fff',
+          padding: '10px 34px',
+          fontSize: '15px',
+          position: 'relative',
+          backgroundColor: '#915EFF',
+          cursor: 'pointer',
+          overflow: 'hidden',
+          transition: 'color 0.3s ease-in-out',
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        onClick={() => {
+          window.open(cvPdf);
+        }}
+      >
+        <span
+          style={{
+            position: 'relative',
+            zIndex: 1,
+          }}
+        >
+          Download CV
+        </span>
+        <span
+          style={{
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: isHovered ? '100%' : '0%',
+            height: '100%',
+            backgroundColor: '#fff',
+            zIndex: -1,
+            transition: 'width 0.3s ease-in-out',
+          }}
+        ></span>
+      </button>
         </div>
       </div>
 

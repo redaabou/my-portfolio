@@ -164,6 +164,9 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <li onClick={() => {
+          window.open(cvPdf);
+        }}>Downlownd Cv</li>
             </ul>
           </div>
         </div>
